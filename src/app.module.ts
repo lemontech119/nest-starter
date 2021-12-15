@@ -7,7 +7,10 @@ import { TestsModule } from './modules/tests';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot({
+      isGlobal: true, 
+      envFilePath: process.env.NODE_ENV === 'prod' ? '.env.prod' : '.env.dev'
+    }),
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: process.env.DB_HOST,
