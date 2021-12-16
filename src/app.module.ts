@@ -8,8 +8,8 @@ import { TestsModule } from './modules/tests';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal: true, 
-      envFilePath: process.env.NODE_ENV === 'prod' ? '.env.prod' : '.env.dev'
+      isGlobal: true,
+      envFilePath: process.env.NODE_ENV === 'prod' ? '.env.prod' : '.env.dev',
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',

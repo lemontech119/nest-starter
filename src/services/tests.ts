@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { TestEntity } from '../entitys/tests';
 import { TestsDao } from '../dao/tests';
-import { AddTestsDto } from "../dto/tests";
+import { AddTestsDto } from '../dto/tests';
 
 @Injectable()
 export class TestsService {
